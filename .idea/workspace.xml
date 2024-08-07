@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0012209-c38b-4219-9fe2-a1adb93e1411" name="Changes" comment="changes for render deployment">
-      <change beforePath="$PROJECT_DIR$/render.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/render.yaml" afterDir="false" />
+    <list default="true" id="a0012209-c38b-4219-9fe2-a1adb93e1411" name="Changes" comment="more changes for render deployment">
+      <change afterPath="$PROJECT_DIR$/build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +78,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723045575605</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="more changes for render deployment">
+      <option name="closed" value="true" />
+      <created>1723045644314</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1723045644314</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -106,6 +115,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial django project" />
     <MESSAGE value="changes for render deployment" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes for render deployment" />
+    <MESSAGE value="more changes for render deployment" />
+    <option name="LAST_COMMIT_MESSAGE" value="more changes for render deployment" />
   </component>
 </project>
