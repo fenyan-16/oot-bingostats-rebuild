@@ -1,0 +1,105 @@
+{% extends "statistics/tournament_page.html" %}
+
+
+{% block subnav-goalstats-swiss %}
+{% if phase == "swiss" %}
+active
+{% endif %}
+{% endblock %}
+
+{% block subnav-goalstats-top16 %}
+{% if phase == "top16" %}
+active
+{% endif %}
+{% endblock %}
+
+
+{% block datatable %}
+<div id="table-filter">
+   <table align="right">
+    <tbody>
+        <tr>
+            <td>Minimum picks:</td>
+            <td width="50px"><input type="number" id="table-filter-min" name="min"></td>
+        </tr>
+    </tbody>
+   </table>
+</div>
+
+<div id="overview-table">
+<table id="myTable" class="table table-dark" data-order='[[1, "desc"], [3, "desc"]]' data-page-length='250' order-column='1'>
+    <thead>
+     <tr>
+      <th>Goal</th>
+      <th>On Boards</th>
+      <th>Picked</th>
+      <th>Wins</th>
+      <th>Sub 1:15</th>
+      <th>Median Time</th>
+      <th>Pick Rate</th>
+      <th>Win Rate</th>
+      <th>Sub 1:15 Rate</th>
+     </tr>
+    </thead>
+    <tbody>
+    {% for goal in goals %}
+     <tr>
+      <td>{{ goal.0 }}</td>
+      <td>{{ goal.1 }}</td>
+      <td>{{ goal.2 }}</td>
+      <td>{{ goal.3 }}</td>
+      <td>{{ goal.7 }}</td>
+      <td>{{ goal.6 }}</td>
+      <td>{{ goal.4|stringformat:'i' }}%</td>
+      <td>{{ goal.5|stringformat:'i' }}%</td>
+      <td>{{ goal.8|stringformat:'i' }}%</td>
+     </tr>
+    {% endfor %}
+    </tbody>
+
+   </table>
+ </div>
+{% endblock %}
+
+{% block datatablejs %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.21/datatables.min.js"></script>
+<script>
+/* Custom filtering function which will search data in column four between two values */
+$.fn.dataTable.ext.search.push(function (settings, data, dataIndex) {
+    var min = parseInt($('#table-filter-min').val(), 10);
+    var picks = parseFloat(data[2]) || 0; // use data for the age column
+
+    if (
+        (isNaN(min) ||
+        (min <= picks))
+    ) {
+        return true;
+    }
+    return false;
+});
+
+$(document).ready(function () {
+    var t = $('#myTable').DataTable( {"columnDefs": [ {
+            "searchable": false,
+            "orderable": false,
+            "targets": 0
+        } ],
+        "order": [[ 1, 'asc' ]]
+    } );
+
+    // Event listener to the two range filtering inputs to redraw on input
+    $('#table-filter-min').keyup(function () {
+        t.draw();
+    });
+    $('#table-filter-min').on('click', function () {
+        t.draw();
+    });
+});
+</script>
+{% endblock %}
+
+
+

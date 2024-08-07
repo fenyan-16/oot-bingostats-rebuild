@@ -1,0 +1,73 @@
+{% extends "era_page.html" %}
+
+
+
+<!--<h1>OoT Bingo {{ version }} - Goal Combinations</h1>-->
+<!--<div>Total races: {{ racecount }}</div>-->
+<!--<div>First {{ version }} race: {{ firstrace }}</div>-->
+<!--<div>Last {{ version }} race: {{ lastrace }}</div>-->
+<!--<br>-->
+
+
+
+<!--<div align='left'><a href="">Back to original sorting</a>-->
+<!--<div align='left'>Last refresh: {{ timestamp }} CEST</div>-->
+<!--<div align='right'><a href="http://www.twitter.com/r_fenyan">Made by Fenyan</a></div>-->
+
+{% block subnav-combinations%}
+    active
+{% endblock %}
+
+{% block annotation %}
+<p class="table-disclaimer">
+    Showing how often sets of (two or three) goals appeared and were picked together. Every combination with 3 or fewer appearances on race boards
+    are omitted.
+</p>
+{% endblock %}
+{% block datatable %}
+ <div id="content">
+   <table id="myTable" class="table table-dark" data-order='[[4, "desc"], [3, "desc"]]' data-page-length='250' order-column='1'>
+
+    <thead>
+     <tr>
+      <th>Goal 1</th>
+      <th>Goal 2</th>
+      <th>Goal 3</th>
+      <th>Appearances (Rows)</th>
+      <th>Picks</th>
+     </tr>
+    </thead>
+    <tbody>
+    {% for combi in combinations %}
+     <tr>
+      <td>{{ combi.2 }}</td>
+      <td>{{ combi.3 }}</td>
+      <td>{{ combi.4 }}</td>
+      <td>{{ combi.0 }}</td>
+      <td>{{ combi.1 }}</td>
+     </tr>
+    {% endfor %}
+    </tbody>
+   </table>
+ </div>
+
+{% endblock %}
+
+{% block datatablejs %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.21/datatables.min.js"></script>
+<script>
+$(document).ready( function () {
+    $('#myTable').DataTable(
+    {
+      "targets": 1,
+      "className": 'dt-body-center'
+      });
+} );
+</script>
+{% endblock %}
+
+
+
