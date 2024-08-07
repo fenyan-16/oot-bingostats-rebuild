@@ -1,31 +1,7 @@
-{% load static %}
+{% extends "frame/base.html" %}
 
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Hello Django on Render!</title>
-
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-          crossorigin="anonymous">
-</head>
-<body>
-<header class="container mt-4 mb-4">
-    <a href="https://render.com">
-        <img src="{% static "homepage/render-banner.png" %}" alt="Homepage banner" class="mw-100">
-    </a>
-</header>
-<main class="container">
-    <div class="row text-center justify-content-center">
-        <div class="col">
-            <h1 class="display-4">Hello World!</h1>
-        </div>
-    </div>
-</main>
-</body>
-</html>
+{% block content %}
+Welcome!
+This page is a work in progress, intended to eventually provide a centralized platform for speedrun racing leagues and tournaments. We are still actively developing the site and apologize for any bugs, errors or other problems.
+Feedback is always appreciated. Feel free to reach out to us with any questions, bug reports or suggestions (Fenyan#8103 on Discord)!
+{% endblock %}

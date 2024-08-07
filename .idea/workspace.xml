@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0012209-c38b-4219-9fe2-a1adb93e1411" name="Changes" comment="added build script for render">
-      <change beforePath="$PROJECT_DIR$/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    <list default="true" id="a0012209-c38b-4219-9fe2-a1adb93e1411" name="Changes" comment="add requirements">
+      <change afterPath="$PROJECT_DIR$/homepage/templates/frame/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homepage/templates/homepage/index_d.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homepage/templates/homepage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/templates/homepage/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homepage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homepage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ootbingo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ootbingo/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,11 +42,17 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "P:/Python/Projekte/oot-bingostats-d/homepage/templates/homepage",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="P:\Python\Projekte\oot-bingostats-d\homepage\templates\homepage" />
+      <recent name="P:\Python\Projekte\oot-bingostats-d" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="P:\Python\Projekte\oot-bingostats-d\homepage\templates" />
       <recent name="P:\Python\Projekte\oot-bingostats-d\homepage\static\homepage" />
       <recent name="P:\Python\Projekte\oot-bingostats-d\homepage\templates\homepage" />
     </key>
@@ -94,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723046535057</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add requirements">
+      <option name="closed" value="true" />
+      <created>1723046779964</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723046779964</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -125,6 +144,7 @@
     <MESSAGE value="changes for render deployment" />
     <MESSAGE value="more changes for render deployment" />
     <MESSAGE value="added build script for render" />
-    <option name="LAST_COMMIT_MESSAGE" value="added build script for render" />
+    <MESSAGE value="add requirements" />
+    <option name="LAST_COMMIT_MESSAGE" value="add requirements" />
   </component>
 </project>
