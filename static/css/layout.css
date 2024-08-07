@@ -1,0 +1,134 @@
+body {
+    background-color: #1d1d1c;
+    color: #ededed;
+}
+
+.h2spacing {
+    margin: 60px 0 26px;
+}
+
+
+#content, #overview-table {
+    margin-top: 24px;
+}
+
+.bg-primary {
+    background-color: #dc4b0b !important;
+}
+
+.btn-primary {
+    background-color: #dc4b0b !important;
+    border-color: #dc4b0b;
+}
+
+.warning_with_button {
+    padding: .375rem .75rem;
+}
+
+#navigation nav {
+ background-color: #04562b;
+}
+
+#navigation nav .nav-link {
+    font-size: 22px;
+    color: #e1e1e0;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+
+#navigation nav .dropdown-item {
+    font-size: 18px;
+    color: #e1e1e0;
+}
+
+#navigation nav .dropdown-item:hover {
+    background-color: #036a34;
+}
+
+#navigation nav .dropdown-menu {
+  background-color: #04562b;
+  margin: 0;
+}
+
+#navigation nav li:hover ul {
+  display: block;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.nav-tabs .li {
+    background-color: #333333;
+    color: #999999;
+}
+
+.nav-link {
+    color: #999999;
+}
+
+.nav-tabs {
+  background-color: #333333;
+}
+
+.nav-tabs .active {
+  background-color: #666666;
+}
+
+#table-filter {
+  padding-bottom: 20px;
+  padding-right: 0px;
+}
+
+#table-filter-min {
+  margin-left: 0.5em;
+  display: inline-block;
+  width: 50px;
+}
+
+.table-disclaimer {
+ margin-top: 24px;
+}
+
+.summary-stats {
+ margin-top: 36px;
+}
+
